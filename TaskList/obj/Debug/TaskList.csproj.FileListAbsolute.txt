@@ -1,0 +1,7 @@
+C:\Users\frees\source\repos\TaskList\TaskList\bin\Debug\TaskList.exe.config
+C:\Users\frees\source\repos\TaskList\TaskList\bin\Debug\TaskList.exe
+C:\Users\frees\source\repos\TaskList\TaskList\bin\Debug\TaskList.pdb
+C:\Users\frees\source\repos\TaskList\TaskList\obj\Debug\TaskList.csprojAssemblyReference.cache
+C:\Users\frees\source\repos\TaskList\TaskList\obj\Debug\TaskList.csproj.CoreCompileInputs.cache
+C:\Users\frees\source\repos\TaskList\TaskList\obj\Debug\TaskList.exe
+C:\Users\frees\source\repos\TaskList\TaskList\obj\Debug\TaskList.pdb
