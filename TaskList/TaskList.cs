@@ -2,15 +2,15 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
-using System.Threading.Tasks;
+
 
 namespace TaskList
 {
     public class TaskList 
     {
-        private List<string> ListOfTasks = new List<string>();
+        private List<TaskList> ListOfTasks = new List<TaskList>();
 
-        public void AddTask()
+        public void AddTask(TaskList task)
         {
             Console.WriteLine("Who's task is this?");
             string taskOwner = Console.ReadLine();
@@ -44,7 +44,7 @@ namespace TaskList
                     }
                     else if (Console.ReadLine() == "n")
                     {
-                        
+                        Console.WriteLine("Let's keep going then");
                     }
                     else
                     {
@@ -57,7 +57,16 @@ namespace TaskList
         }
         public void Complete()
         {
+            Console.WriteLine("Which task would you like to mark complete?");
+            var userComplete = int.Parse(Console.ReadLine());
+            for (int c = 0; c < ListOfTasks.Count; c++)
+            {
+                if (c== userComplete)
+                {
+                    
+                }
 
+            }
         }
         
         
