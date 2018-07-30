@@ -12,27 +12,40 @@ namespace TaskList
     {
         static void Main(string[] args)
         {
-            Console.WriteLine("What would you like to do today?");
-            // Need to write main menu
-            var userEntry = Console.ReadLine();
+           bool doAgain = true;
 
-            
-           if (userEntry == "tasks")
+            do { 
+                Console.WriteLine("Welcome to Task Manager Beta");
+                Console.WriteLine("\t1. \tTask List");
+                Console.WriteLine("\t2. \tAdd Task");
+                Console.WriteLine("\t3. \tDelete Task");
+                Console.WriteLine("\t4. \tMark Task Complete");
+                Console.WriteLine("\t5. \tQuit");
+            string userOption = (Console.ReadLine());
+            switch(userOption)
             {
-                TaskList.Display();
+                case "1":
+                    TaskList.Display();
+                    break;
+                case "2":
+                    TaskList.AddTask();
+                    break;
+                case "3":
+                    TaskList.Delete();
+                    break;
+                case "4":
+                    TaskList.Complete();
+                    break;
+                case "5":
+                    Console.WriteLine("Are you sure? (y/n)");
+                    if (Console.ReadLine() == "y")
+                        doAgain = false;
+                    else
+                    {
+                        break;
+                    }
             }
-            else if (userEntry == "add")
-            {
-                TaskList.AddTask();
-            }
-            else if (userEntry == "delete")
-            {
-                TaskList.Delete();    
-            }
-           else if (userEntry == "complete")
-            {
-                TaskList.Complete();
-            }
+                while (doAgain == false) ;
         }
     }
 }
