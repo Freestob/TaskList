@@ -14,7 +14,7 @@ namespace TaskL
         public string DueDate { get; set; }
         public bool IsCompleted { get; set; }
 
-        public TaskEntry(string TaskOwner, string getDone, string dueDate)
+        public TaskEntry(string taskOwner, string getDone, string dueDate)
         {
             TaskOwner = taskOwner;
             GetDone = getDone;
