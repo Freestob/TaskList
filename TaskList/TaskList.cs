@@ -25,7 +25,7 @@ namespace TaskList
         {
             for (int i = 0; i < ListOfTasks.Count; i++)
             {
-                Console.WriteLine(i++ $"{ListOfTasks.taskOwner}, {ListOfTasks.getDone}, {ListOfTasks.dueDate}");
+                Console.WriteLine($"{ListOfTasks[i]}, {ListOfTasks.getDone}, {ListOfTasks.dueDate}");
             }
         }
         public void Delete()
@@ -40,6 +40,7 @@ namespace TaskList
                     if (Console.ReadLine() == "y")
                     {
                         ListOfTasks.Remove(ListOfTasks[d]);
+                        return MainMenu();
                     }
                     else if (Console.ReadLine() == "n")
                     {
@@ -61,6 +62,11 @@ namespace TaskList
         public string MainMenu()
         {
             Console.WriteLine("Welcome to Task Manager Beta");
+            Console.WriteLine("\t1. \tTask List");
+            Console.WriteLine("\t2. \tAdd Task");
+            Console.WriteLine("\t3. \tDelete Task");
+            Console.WriteLine("\t4. \tMark Task Complete");
+            Console.WriteLine("\t5. \tQuit");
         }
 
 
