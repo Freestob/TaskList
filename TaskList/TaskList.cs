@@ -36,13 +36,33 @@ namespace TaskList
             {
                 if (d == userDeletion)
                 {
-                    ListOfTasks.Remove(ListOfTasks[d]);
+                    Console.WriteLine("Are you sure that you want to delete this? (y/n)");
+                    if (Console.ReadLine() == "y")
+                    {
+                        ListOfTasks.Remove(ListOfTasks[d]);
+                    }
+                    else if (Console.ReadLine() == "n")
+                    {
+                        return MainMenu();
+                    }
+                    else
+                    {
+                        Console.WriteLine("That is not a valid option");
+                        return MainMenu();
+                    }
                 }
             }
+
         }
         public void Complete()
         {
 
         }
+        public string MainMenu()
+        {
+            Console.WriteLine("Welcome to Task Manager Beta");
+        }
+
+
     }
 }
